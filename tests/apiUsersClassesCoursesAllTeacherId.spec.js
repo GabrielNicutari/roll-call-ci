@@ -91,7 +91,7 @@ describe('GET /api/users/classes/courses/all/:teacherId', () => {
         expect(response.body.length).toEqual(0);
       })
       .catch(async (error) => {
-        console.log(error);
+        throw new Error(error);
       });
   }, 20000);
 
